@@ -36,41 +36,55 @@
   .preview{display:none;text-align:center}
   .preview img{width:130px;height:170px;object-fit:cover;border-radius:16px;border:4px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,.15);margin-bottom:14px}
 
-  /* Quiz biotipo */
   .quiz{display:none}
-  .qtitle{font-family:Georgia,serif;font-size:19px;margin-bottom:4px}
   .qnum{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
   .qtext{font-size:16px;font-weight:600;margin-bottom:14px;line-height:1.4}
   .opt{border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px;cursor:pointer;font-size:15px;transition:.15s;background:#fffef9}
   .opt:hover{border-color:var(--accent)}
-  .opt.sel{border-color:var(--accent);background:#fbf4ec;box-shadow:0 4px 12px rgba(176,137,104,.18)}
   .qprogress{height:4px;background:#eee3d3;border-radius:9px;margin-bottom:18px;overflow:hidden}
   .qprogress i{display:block;height:100%;background:var(--accent);width:33%;transition:.3s}
 
-  /* Loading */
   .loader{display:none;text-align:center;padding:30px 10px}
   .ring{width:52px;height:52px;border:4px solid #eaddcb;border-top-color:var(--accent);border-radius:50%;margin:0 auto 18px;animation:spin 1s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
   .lstep{font-size:15px;min-height:22px}
 
-  /* Result */
   .result{display:none}
   .rhead{text-align:center;background:linear-gradient(160deg,#fffdf9,#f3eadc)}
   .rhead img{width:96px;height:120px;object-fit:cover;border-radius:12px;border:3px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.15);margin-bottom:12px}
   .twin{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:6px}
   .badge{flex:1;min-width:130px;background:#f3ebe0;border:1px solid var(--line);border-radius:14px;padding:12px}
   .badge small{display:block;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
-  .badge b{font-family:Georgia,serif;font-size:17px;color:var(--accent-dark)}
+  .badge b{font-family:Georgia,serif;font-size:16px;color:var(--accent-dark)}
   .sec-title{font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:2px 0 12px}
+
+  .skinrow{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .skinchip{width:54px;height:54px;border-radius:12px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12);flex:none}
+  .skinrow div small{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+  .skinrow div b{font-family:Georgia,serif;font-size:15px}
+  .mrow{display:flex;align-items:center;gap:10px;margin:9px 0}
+  .mrow .ml{width:92px;font-size:13px;color:var(--muted);flex:none}
+  .mrow .mbarwrap{flex:1;height:8px;background:#eee3d3;border-radius:9px;overflow:hidden}
+  .mrow .mbar{height:100%;background:var(--accent);border-radius:9px;width:0;transition:.5s}
+  .mrow .mv{width:74px;text-align:right;font-size:12.5px;font-weight:600;color:var(--accent-dark);flex:none}
+
   .sw-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
   .sw{aspect-ratio:1;border-radius:11px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+  .metal{text-align:center;margin:14px 0 0;font-size:14.5px;color:var(--accent-dark);font-weight:600}
+  .subttl{font-size:12px;color:var(--muted);margin:16px 0 10px;text-transform:uppercase;letter-spacing:.05em}
+  .n-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+
+  .look{display:flex;gap:10px}
+  .look .lk{flex:1;text-align:center}
+  .look .lksw{aspect-ratio:1;border-radius:12px;margin-bottom:6px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+  .look .lkl{font-size:11px;color:var(--muted);line-height:1.3}
+
   .list{list-style:none}
   .list li{padding:9px 0 9px 26px;position:relative;font-size:14.5px;line-height:1.45;border-bottom:1px solid #f1e9dc}
   .list li:last-child{border-bottom:0}
   .list li::before{position:absolute;left:2px;top:9px}
   .list.yes li::before{content:"✓";color:#7a9a5b;font-weight:700}
   .list.no li::before{content:"✕";color:#c08a86;font-weight:700}
-  .metal{text-align:center;margin:14px 0 0;font-size:14.5px;color:var(--accent-dark);font-weight:600}
   .devo{font-size:15px;line-height:1.65;color:#4a433b}
   .devo b{color:var(--accent-dark)}
   .cta{background:linear-gradient(135deg,#b08968,#8c6a4f);color:#fff;border-radius:16px;padding:22px;text-align:center}
@@ -87,7 +101,7 @@
   <div class="brand">O Poder da Autoimagem</div>
   <div class="demo-badge">Prévia demonstrativa</div>
   <h1>Descubra as suas <em>cores</em> e o estilo que <em>valoriza o seu corpo</em></h1>
-  <p class="sub">Envie uma foto de corpo inteiro e receba, na hora, a sua cartela de cores e as peças que mais combinam com você.</p>
+  <p class="sub">Envie uma foto de corpo inteiro e receba, na hora, o seu diagnóstico de imagem completo.</p>
 
   <!-- STEP 1: FOTO -->
   <div class="card" id="cardUpload">
@@ -113,7 +127,7 @@
     <p class="tip">🔒 Sua foto é processada <b>somente neste aparelho</b> e não é enviada para lugar nenhum.</p>
   </div>
 
-  <!-- STEP 2: QUIZ BIOTIPO -->
+  <!-- STEP 2: QUIZ -->
   <div class="card quiz" id="quiz">
     <div class="qprogress"><i id="qbar"></i></div>
     <div class="qnum" id="qnum">Pergunta 1 de 3</div>
@@ -139,19 +153,35 @@
     </div>
 
     <div class="card">
+      <div class="sec-title">🔬 O que a análise leu de você</div>
+      <div class="skinrow">
+        <div class="skinchip" id="skinChip"></div>
+        <div><small>Tom de pele detectado</small><br><b id="skinName">—</b></div>
+      </div>
+      <div id="metrics"></div>
+    </div>
+
+    <div class="card">
       <div class="sec-title">✨ A sua cartela de cores</div>
       <div class="sw-grid" id="paletteGrid"></div>
       <p class="metal" id="metalLine"></p>
+      <div class="subttl">Seus neutros curinga</div>
+      <div class="n-grid" id="neutralGrid"></div>
     </div>
 
     <div class="card">
       <div class="sec-title">👗 Peças que valorizam você</div>
       <ul class="list yes" id="bioYes"></ul>
     </div>
-
     <div class="card">
       <div class="sec-title">🚫 O que evitar</div>
       <ul class="list no" id="bioNo"></ul>
+    </div>
+
+    <div class="card">
+      <div class="sec-title">🧩 Um look montado no seu perfil</div>
+      <div class="look" id="lookBox"></div>
+      <p class="tip" id="lookCaption" style="margin-top:14px"></p>
     </div>
 
     <div class="card">
@@ -177,16 +207,28 @@
 
 <canvas id="cv" class="hidden"></canvas>
 <script>
-/* ============ CORES (estações) ============ */
+/* ============ ESTAÇÕES (com neutros e sub-tipos) ============ */
 const SEASONS={
-  primavera:{name:"Primavera",palette:["#FF7F50","#FFB347","#FFD966","#A8D08D","#66CDAA","#FF9E9E","#F4A460","#7FD1B9","#F08080","#FFE4B5"],
-    devoCor:"tons <b>quentes, claros e vivos</b> — coral, pêssego, dourado, verde-água"},
-  verao:{name:"Verão",palette:["#A7C7E7","#C8A2C8","#E6A8B8","#B0C4B1","#9FA8DA","#D8BFD8","#AEC6CF","#E8C5C1","#B4A7D6","#92A8A4"],
-    devoCor:"tons <b>frios, suaves e delicados</b> — azul-poeira, lavanda, rosê, cinza"},
-  outono:{name:"Outono",palette:["#B7410E","#808000","#C99A46","#8B5A2B","#6B8E23","#A0522D","#2E8B87","#CC7722","#556B2F","#9C4A2E"],
-    devoCor:"tons <b>quentes, terrosos e profundos</b> — terracota, mostarda, verde-oliva, ferrugem"},
-  inverno:{name:"Inverno",palette:["#C0002B","#0047AB","#009B77","#C71585","#000000","#4B0082","#00A3E0","#7D2181","#E0115F","#1c1c1c"],
-    devoCor:"tons <b>intensos e contrastantes</b> — vermelho puro, cobalto, esmeralda, preto e branco"}
+  primavera:{name:"Primavera",metal:"Ouro (dourado) 💛",
+    palette:["#FF7F50","#FFB347","#FFD966","#A8D08D","#66CDAA","#FF9E9E","#F4A460","#7FD1B9","#F08080","#FFE4B5"],
+    neutros:["#F5E9D0","#C8A165","#FFF8E7","#9DB4C0"],
+    devoCor:"tons <b>quentes, claros e vivos</b> — coral, pêssego, dourado, verde-água",
+    subs:["Clara","Quente","Brilhante"]},
+  verao:{name:"Verão",metal:"Prata (prateado) 🤍",
+    palette:["#A7C7E7","#C8A2C8","#E6A8B8","#B0C4B1","#9FA8DA","#D8BFD8","#AEC6CF","#E8C5C1","#B4A7D6","#92A8A4"],
+    neutros:["#B7C0C9","#F0F0F2","#C9B7B0","#7C8CA1"],
+    devoCor:"tons <b>frios, suaves e delicados</b> — azul-poeira, lavanda, rosê, cinza",
+    subs:["Clara","Frio","Suave"]},
+  outono:{name:"Outono",metal:"Ouro (dourado) 💛",
+    palette:["#B7410E","#808000","#C99A46","#8B5A2B","#6B8E23","#A0522D","#2E8B87","#CC7722","#556B2F","#9C4A2E"],
+    neutros:["#6B4A2B","#B3A369","#EDE0C8","#5B5B37"],
+    devoCor:"tons <b>quentes, terrosos e profundos</b> — terracota, mostarda, verde-oliva, ferrugem",
+    subs:["Suave","Quente","Profundo"]},
+  inverno:{name:"Inverno",metal:"Prata (prateado) 🤍",
+    palette:["#C0002B","#0047AB","#009B77","#C71585","#000000","#4B0082","#00A3E0","#7D2181","#E0115F","#1c1c1c"],
+    neutros:["#000000","#FFFFFF","#333333","#1B2A4A"],
+    devoCor:"tons <b>intensos e contrastantes</b> — vermelho puro, cobalto, esmeralda, preto e branco",
+    subs:["Brilhante","Frio","Profundo"]}
 };
 
 /* ============ BIOTIPOS ============ */
@@ -194,29 +236,42 @@ const BIOS={
   ampulheta:{name:"Ampulheta",
     yes:["Peças que marcam a cintura","Vestidos tubinho e godê","Cinto na linha da cintura","Alfaiataria ajustada ao corpo"],
     no:["Roupas retas e largas que escondem a cintura","Peças sem forma, tipo saco"],
-    devo:"Você tem o corpo <b>equilibrado com a cintura marcada</b> — o segredo é sempre valorizar esse meio. Fuja de roupas que apagam a sua curva natural."},
+    devo:"Você tem o corpo <b>equilibrado com a cintura marcada</b> — o segredo é sempre valorizar esse meio."},
   triangulo:{name:"Triângulo (Pera)",
     yes:["Ombros em destaque (decotes, ombreiras leves)","Blusas claras ou estampadas em cima","Calças e saias escuras e retas","Mangas bufantes"],
     no:["Volume, estampa ou bolso no quadril","Peças muito justas na parte de baixo"],
-    devo:"Seu quadril é a parte mais marcante — a estratégia é <b>equilibrar, chamando o olhar pra cima</b>. Ilumine o busto e mantenha a base mais discreta."},
+    devo:"Seu quadril é a parte mais marcante — a estratégia é <b>equilibrar, chamando o olhar pra cima</b>."},
   invertido:{name:"Triângulo Invertido",
     yes:["Volume na parte de baixo (saia godê, calça flare)","Decote em V","Cores claras embaixo","Peças fluidas no quadril"],
     no:["Ombreiras e mangas bufantes","Decotes horizontais, ombro a ombro"],
-    devo:"Seus ombros são o destaque — o jogo é <b>dar volume embaixo pra equilibrar</b>. Suavize a parte de cima e valorize o quadril e as pernas."},
+    devo:"Seus ombros são o destaque — o jogo é <b>dar volume embaixo pra equilibrar</b>."},
   retangulo:{name:"Retângulo",
     yes:["Cintos para criar cintura","Recortes, peplum e babados","Sobreposições que geram curvas","Vestidos com marcação no meio"],
     no:["Peças totalmente retas e sem corte","Modelagens que deixam o corpo 'quadrado'"],
-    devo:"Seu corpo é <b>alinhado e sem muitas curvas</b> — a mágica é criar a ilusão de cintura com cintos, recortes e camadas. Aposte em volume estratégico."},
+    devo:"Seu corpo é <b>alinhado e sem muitas curvas</b> — a mágica é criar a ilusão de cintura com cintos e recortes."},
   oval:{name:"Oval",
     yes:["Decote em V para alongar","Peças fluidas que não marcam a barriga","Destaque nas pernas (saias e calças)","Camadas verticais abertas (colete, cardigã)"],
     no:["Cinto apertado na barriga","Tecidos rígidos que marcam o meio"],
-    devo:"Você concentra volume no <b>centro do corpo</b> — o foco é alongar o tronco e valorizar as pernas. Linhas verticais e decote em V são seus melhores amigos."}
+    devo:"Você concentra volume no <b>centro do corpo</b> — o foco é alongar o tronco e valorizar as pernas."}
 };
 
-/* ============ ANÁLISE DE COR (real, dos pixels) ============ */
+/* ============ ANÁLISE DE COR ============ */
 function rgb2hsv(r,g,b){r/=255;g/=255;b/=255;const mx=Math.max(r,g,b),mn=Math.min(r,g,b),d=mx-mn;let h=0;if(d){if(mx===r)h=((g-b)/d)%6;else if(mx===g)h=(b-r)/d+2;else h=(r-g)/d+4;h*=60;if(h<0)h+=360;}return{h,s:mx?d/mx:0,v:mx};}
 function lum(r,g,b){return 0.299*r+0.587*g+0.114*b;}
 function isSkin(r,g,b){const mx=Math.max(r,g,b),mn=Math.min(r,g,b);return r>95&&g>40&&b>20&&(mx-mn)>15&&Math.abs(r-g)>15&&r>g&&r>b;}
+function toHex(r,g,b){return '#'+[r,g,b].map(x=>Math.round(x).toString(16).padStart(2,'0')).join('');}
+function clamp(x){return Math.max(4,Math.min(100,Math.round(x)));}
+function skinLabel(warm,depthPct){
+  const t=warm==='quente'?'quente':'frio';
+  const d=depthPct>=55?'profunda':(depthPct>=32?'média':'clara');
+  return 'Pele '+d+' de subtom '+t;
+}
+function pickSub(key,m){
+  if(key==='primavera'){ if(m.intensePct>=50&&m.contrastPct>=45)return'Brilhante'; if(m.warmPct>=72)return'Quente'; return'Clara'; }
+  if(key==='verao'){ if(m.intensePct<40)return'Suave'; if(m.warmPct<=22)return'Frio'; return'Clara'; }
+  if(key==='outono'){ if(m.depthPct>=64)return'Profundo'; if(m.intensePct<42)return'Suave'; return'Quente'; }
+  if(m.intensePct>=48||m.contrastPct>=55)return'Brilhante'; if(m.depthPct>=66)return'Profundo'; return'Frio';
+}
 function analyzeColor(img){
   const cv=document.getElementById('cv');
   const scale=340/Math.max(img.width,img.height);
@@ -231,52 +286,66 @@ function analyzeColor(img){
     lums.push(lum(r,g,b));
     if(isSkin(r,g,b)){sr+=r;sg+=g;sb+=b;sn++;}
   }
-  if(sn<40){ // pouca pele: usa faixa superior central (rosto)
-    sr=sg=sb=sn=0;
-    const x0=(w*0.3)|0,x1=Math.ceil(w*0.7),y0=(h*0.08)|0,y1=Math.ceil(h*0.35);
-    for(let y=y0;y<y1;y++)for(let x=x0;x<x1;x++){const i=(y*w+x)*4;sr+=data[i];sg+=data[i+1];sb+=data[i+2];sn++;}
-  }
+  if(sn<40){sr=sg=sb=sn=0;const x0=(w*0.3)|0,x1=Math.ceil(w*0.7),y0=(h*0.08)|0,y1=Math.ceil(h*0.35);
+    for(let y=y0;y<y1;y++)for(let x=x0;x<x1;x++){const i=(y*w+x)*4;sr+=data[i];sg+=data[i+1];sb+=data[i+2];sn++;}}
   const R=sr/sn,G=sg/sn,B=sb/sn;
   const hsv=rgb2hsv(R,G,B);
+
   const warmIndex=(R-B)+(G-B)*0.5;
   let warmScore=0;
   warmScore+=warmIndex>60?1:(warmIndex<38?-1:0);
   let hh=hsv.h;if(hh>180)hh-=360;
   warmScore+=(hh>=25)?1:(hh<=15?-1:0);
   const tone=warmScore>=0?"quente":"frio";
+
   lums.sort((a,b)=>a-b);
   const dark=lums.slice(0,Math.max(1,(lums.length*0.15)|0));
   const darkAvg=dark.reduce((a,b)=>a+b,0)/dark.length;
   const depth=darkAvg<70?"profunda":"clara";
+  const p10=lums[(lums.length*0.1)|0], p90=lums[(lums.length*0.9)|0];
+
+  const m={
+    warmPct: clamp(warmIndex*0.9),
+    depthPct: clamp((255-darkAvg)/255*100),
+    intensePct: clamp(hsv.s*170),
+    contrastPct: clamp((p90-p10)/170*100)
+  };
+
   let key;
   if(tone==="quente"&&depth==="clara")key="primavera";
   else if(tone==="frio"&&depth==="clara")key="verao";
   else if(tone==="quente"&&depth==="profunda")key="outono";
   else key="inverno";
-  return SEASONS[key];
+
+  const season=SEASONS[key];
+  const sub=pickSub(key,m);
+  return {
+    key, season, sub,
+    fullName: season.name+' '+sub,
+    skinHex: toHex(R,G,B),
+    skinTxt: skinLabel(tone, m.depthPct),
+    metrics:[
+      {l:'Subtom', v: tone==='quente'?'Quente':'Frio', pct:m.warmPct},
+      {l:'Profundidade', v: m.depthPct>=55?'Profunda':(m.depthPct>=32?'Média':'Clara'), pct:m.depthPct},
+      {l:'Intensidade', v: m.intensePct>=45?'Intensa':'Suave', pct:m.intensePct},
+      {l:'Contraste', v: m.contrastPct>=55?'Alto':(m.contrastPct>=30?'Médio':'Baixo'), pct:m.contrastPct}
+    ],
+    contrastHigh: m.contrastPct>=50
+  };
 }
 
-/* ============ CLASSIFICAÇÃO DE BIOTIPO (3 respostas) ============ */
-// q1: ombros x quadril  -> 'ombro' | 'quadril' | 'iguais'
-// q2: cintura           -> 'marcada' | 'reta'
-// q3: onde ganha volume -> 'quadril' | 'barriga' | 'equilibrado'
+/* ============ BIOTIPO ============ */
 function classifyBio(q1,q2,q3){
-  if(q3==='barriga' && q2==='reta') return BIOS.oval;
-  if(q1==='ombro')   return BIOS.invertido;
-  if(q1==='quadril') return BIOS.triangulo;
-  // ombros ~ quadril
-  if(q2==='marcada') return BIOS.ampulheta;
+  if(q3==='barriga'&&q2==='reta')return BIOS.oval;
+  if(q1==='ombro')return BIOS.invertido;
+  if(q1==='quadril')return BIOS.triangulo;
+  if(q2==='marcada')return BIOS.ampulheta;
   return BIOS.retangulo;
 }
-
-/* ============ PERGUNTAS ============ */
 const QUESTIONS=[
-  {key:'q1',text:'Olhando no espelho, o que é mais largo?',
-   opts:[['Meus ombros','ombro'],['Meu quadril','quadril'],['São parecidos','iguais']]},
-  {key:'q2',text:'E a sua cintura, como ela é?',
-   opts:[['Bem marcada (afina no meio)','marcada'],['Pouco ou nada marcada (mais reta)','reta']]},
-  {key:'q3',text:'Onde você tende a ganhar volume primeiro?',
-   opts:[['Quadril e coxas','quadril'],['Barriga e tronco','barriga'],['Distribui equilibrado','equilibrado']]}
+  {key:'q1',text:'Olhando no espelho, o que é mais largo?',opts:[['Meus ombros','ombro'],['Meu quadril','quadril'],['São parecidos','iguais']]},
+  {key:'q2',text:'E a sua cintura, como ela é?',opts:[['Bem marcada (afina no meio)','marcada'],['Pouco ou nada marcada (mais reta)','reta']]},
+  {key:'q3',text:'Onde você tende a ganhar volume primeiro?',opts:[['Quadril e coxas','quadril'],['Barriga e tronco','barriga'],['Distribui equilibrado','equilibrado']]}
 ];
 
 /* ============ FLUXO / UI ============ */
@@ -284,114 +353,77 @@ const el=id=>document.getElementById(id);
 let imgEl=null,imgSrc=null,stream=null,facing='user';
 const answers={};let qIdx=0;
 
-function showPreview(src){
-  imgSrc=src;
-  imgEl=new Image();
-  imgEl.onload=()=>{
-    el('thumb').src=src;
-    el('chooser').style.display='none';
-    el('camView').style.display='none';
-    el('preview').style.display='block';
-  };
-  imgEl.src=src;
-}
-/* galeria */
+function showPreview(src){imgSrc=src;imgEl=new Image();imgEl.onload=()=>{el('thumb').src=src;el('chooser').style.display='none';el('camView').style.display='none';el('preview').style.display='block';};imgEl.src=src;}
 el('btnGallery').addEventListener('click',()=>el('file').click());
 el('file').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;showPreview(URL.createObjectURL(f));});
-/* câmera */
 function stopCamera(){if(stream){stream.getTracks().forEach(t=>t.stop());stream=null;}}
 async function startCamera(){
   el('camErr').style.display='none';el('chooser').style.display='none';el('camView').style.display='block';
-  try{
-    stopCamera();
-    stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:facing},audio:false});
-    const v=el('video');v.srcObject=stream;v.classList.toggle('mirror',facing==='user');await v.play().catch(()=>{});
-  }catch(err){
-    el('camErr').style.display='block';
-    el('camErr').innerHTML="⚠️ O navegador bloqueou a câmera (acontece ao abrir o arquivo direto do PC). Toque em <b>cancelar</b> e use <b>Enviar da galeria</b> — na versão online a câmera funciona 100%.";
-  }
+  try{stopCamera();stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:facing},audio:false});
+    const v=el('video');v.srcObject=stream;v.classList.toggle('mirror',facing==='user');await v.play().catch(()=>{});}
+  catch(err){el('camErr').style.display='block';el('camErr').innerHTML="⚠️ O navegador bloqueou a câmera (acontece ao abrir o arquivo direto do PC). Toque em <b>cancelar</b> e use <b>Enviar da galeria</b>.";}
 }
 el('btnCam').addEventListener('click',startCamera);
 el('btnFlip').addEventListener('click',()=>{facing=(facing==='user')?'environment':'user';startCamera();});
 el('btnCancelCam').addEventListener('click',()=>{stopCamera();el('camView').style.display='none';el('chooser').style.display='block';});
-el('btnShot').addEventListener('click',()=>{
-  const v=el('video');if(!v.videoWidth)return;
-  const c=document.createElement('canvas');c.width=v.videoWidth;c.height=v.videoHeight;
-  c.getContext('2d').drawImage(v,0,0);stopCamera();showPreview(c.toDataURL('image/jpeg',0.92));
-});
+el('btnShot').addEventListener('click',()=>{const v=el('video');if(!v.videoWidth)return;const c=document.createElement('canvas');c.width=v.videoWidth;c.height=v.videoHeight;c.getContext('2d').drawImage(v,0,0);stopCamera();showPreview(c.toDataURL('image/jpeg',0.92));});
 
-/* ir pro quiz */
-el('toQuiz').addEventListener('click',()=>{
-  el('cardUpload').style.display='none';
-  qIdx=0;renderQuestion();
-  el('quiz').style.display='block';
-});
+el('toQuiz').addEventListener('click',()=>{el('cardUpload').style.display='none';qIdx=0;renderQuestion();el('quiz').style.display='block';});
 function renderQuestion(){
   const q=QUESTIONS[qIdx];
   el('qnum').textContent='Pergunta '+(qIdx+1)+' de '+QUESTIONS.length;
   el('qbar').style.width=((qIdx+1)/QUESTIONS.length*100)+'%';
   el('qtext').textContent=q.text;
   const box=el('qopts');box.innerHTML='';
-  q.opts.forEach(([label,val])=>{
-    const d=document.createElement('div');
-    d.className='opt'+(answers[q.key]===val?' sel':'');
-    d.textContent=label;
-    d.onclick=()=>{answers[q.key]=val;next();};
-    box.appendChild(d);
-  });
+  q.opts.forEach(([label,val])=>{const d=document.createElement('div');d.className='opt';d.textContent=label;d.onclick=()=>{answers[q.key]=val;next();};box.appendChild(d);});
   el('qback').style.visibility=qIdx===0?'hidden':'visible';
 }
-function next(){
-  if(qIdx<QUESTIONS.length-1){qIdx++;renderQuestion();}
-  else{runAnalysis();}
-}
+function next(){if(qIdx<QUESTIONS.length-1){qIdx++;renderQuestion();}else{runAnalysis();}}
 el('qback').addEventListener('click',()=>{if(qIdx>0){qIdx--;renderQuestion();}});
 
-/* análise + loading */
-const STEPS=["Lendo os tons da sua pele…","Definindo o seu subtom…","Cruzando com o seu biotipo…","Montando o seu perfil ✨"];
+const STEPS=["Lendo os tons da sua pele…","Medindo subtom e profundidade…","Calculando intensidade e contraste…","Cruzando com o seu biotipo…","Montando o seu diagnóstico ✨"];
 function runAnalysis(){
-  el('quiz').style.display='none';
-  el('loader').style.display='block';
+  el('quiz').style.display='none';el('loader').style.display='block';
   let i=0;el('lstep').textContent=STEPS[0];
-  const t=setInterval(()=>{i++;if(i<STEPS.length)el('lstep').textContent=STEPS[i];},650);
-  setTimeout(()=>{
-    clearInterval(t);
-    const season=analyzeColor(imgEl);
-    const bio=classifyBio(answers.q1,answers.q2,answers.q3);
-    render(season,bio);
-    el('loader').style.display='none';
-    el('result').style.display='block';
-    window.scrollTo({top:0,behavior:'smooth'});
-  },2600);
+  const t=setInterval(()=>{i++;if(i<STEPS.length)el('lstep').textContent=STEPS[i];},600);
+  setTimeout(()=>{clearInterval(t);const c=analyzeColor(imgEl);const bio=classifyBio(answers.q1,answers.q2,answers.q3);render(c,bio);el('loader').style.display='none';el('result').style.display='block';window.scrollTo({top:0,behavior:'smooth'});},3000);
 }
-function swatches(colors){const c=el('paletteGrid');c.innerHTML='';colors.forEach(hex=>{const d=document.createElement('div');d.className='sw';d.style.background=hex;c.appendChild(d);});}
+function swatches(id,colors){const c=el(id);c.innerHTML='';colors.forEach(hex=>{const d=document.createElement('div');d.className='sw';d.style.background=hex;c.appendChild(d);});}
 function fillList(id,arr){const u=el(id);u.innerHTML='';arr.forEach(t=>{const li=document.createElement('li');li.textContent=t;u.appendChild(li);});}
-function render(season,bio){
+function render(c,bio){
   el('rthumb').src=imgSrc;
-  el('bSeason').textContent=season.name;
+  el('bSeason').textContent=c.fullName;
   el('bBio').textContent=bio.name;
-  swatches(season.palette);
-  const metal=(season.name==='Primavera'||season.name==='Outono')?'Ouro (dourado) 💛':'Prata (prateado) 🤍';
-  el('metalLine').innerHTML='💍 Seu metal ideal: <b>'+metal+'</b>';
+
+  el('skinChip').style.background=c.skinHex;
+  el('skinName').textContent=c.skinTxt;
+  const mb=el('metrics');mb.innerHTML='';
+  c.metrics.forEach(m=>{
+    const row=document.createElement('div');row.className='mrow';
+    row.innerHTML='<span class="ml">'+m.l+'</span><span class="mbarwrap"><span class="mbar"></span></span><span class="mv">'+m.v+'</span>';
+    mb.appendChild(row);
+    requestAnimationFrame(()=>{row.querySelector('.mbar').style.width=m.pct+'%';});
+  });
+
+  swatches('paletteGrid',c.season.palette);
+  el('metalLine').innerHTML='💍 Seu metal ideal: <b>'+c.season.metal+'</b>';
+  swatches('neutralGrid',c.season.neutros);
+
   fillList('bioYes',bio.yes);
   fillList('bioNo',bio.no);
-  el('devo').innerHTML="A sua paleta é de "+season.devoCor+". "+bio.devo;
+
+  const lookCols=[c.season.palette[0],c.season.neutros[0],c.season.palette[4]];
+  const lookLbl=['Peça principal','Neutro de base','Ponto de cor'];
+  const lb=el('lookBox');lb.innerHTML='';
+  lookCols.forEach((hex,i)=>{const d=document.createElement('div');d.className='lk';d.innerHTML='<div class="lksw" style="background:'+hex+'"></div><div class="lkl">'+lookLbl[i]+'</div>';lb.appendChild(d);});
+  el('lookCaption').textContent='Ex.: base neutra + a sua cor de destaque = um look de trabalho elegante e no seu tom.';
+
+  const contrastTip=c.contrastHigh?'Como o seu contraste é alto, ouse em combinações de cores bem diferentes entre si — fica poderoso em você.':'Como o seu contraste é mais suave, prefira tons próximos e harmônicos, sem estourar em preto e branco juntos.';
+  el('devo').innerHTML='A leitura da sua foto apontou '+c.skinTxt.toLowerCase()+', o que te posiciona como <b>'+c.fullName+'</b>: a sua paleta pede '+c.season.devoCor+'. '+bio.devo+' '+contrastTip;
 }
 
-/* CTA + reset */
-el('ctaBtn').addEventListener('click',()=>{
-  const m=el('ctaMsg');m.style.display='block';
-  m.innerHTML="✅ <b>É aqui que entra a oferta.</b> A conversa segue no WhatsApp: a IA envia o relatório completo, oferece a consultoria e conduz o pagamento. <i>(botão ilustrativo nesta prévia)</i>";
-  m.scrollIntoView({behavior:'smooth',block:'center'});
-});
-function resetAll(){
-  stopCamera();
-  ['camView','preview','quiz','loader','result'].forEach(id=>el(id).style.display='none');
-  el('camErr').style.display='none';el('ctaMsg').style.display='none';
-  el('chooser').style.display='block';el('cardUpload').style.display='block';
-  el('file').value='';for(const k in answers)delete answers[k];qIdx=0;
-  window.scrollTo({top:0,behavior:'smooth'});
-}
+el('ctaBtn').addEventListener('click',()=>{const m=el('ctaMsg');m.style.display='block';m.innerHTML="✅ <b>É aqui que entra a oferta.</b> A conversa segue no WhatsApp: a IA envia o relatório completo, oferece a consultoria e conduz o pagamento. <i>(botão ilustrativo nesta prévia)</i>";m.scrollIntoView({behavior:'smooth',block:'center'});});
+function resetAll(){stopCamera();['camView','preview','quiz','loader','result'].forEach(id=>el(id).style.display='none');el('camErr').style.display='none';el('ctaMsg').style.display='none';el('chooser').style.display='block';el('cardUpload').style.display='block';el('file').value='';for(const k in answers)delete answers[k];qIdx=0;window.scrollTo({top:0,behavior:'smooth'});}
 el('reset1').addEventListener('click',resetAll);
 el('reset2').addEventListener('click',resetAll);
 </script>
